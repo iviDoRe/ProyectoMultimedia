@@ -10,6 +10,9 @@ html {
 	background: linear-gradient(to bottom, #e0f7fa, #80deea);
 	background-size: cover;
 	background-attachment: fixed;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
 }
 
 body {
@@ -171,3 +174,7 @@ p {
 	border-radius: 5px;
 }
 
+section{
+	min-height: 100vh;
+
+}
