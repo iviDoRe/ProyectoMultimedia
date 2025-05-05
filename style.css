@@ -7,24 +7,30 @@
 }
 
 html {
-	background-image: linear-gradient(white, #9FD5D1); 
+	background: linear-gradient(to bottom, #e0f7fa, #80deea);
 	background-size: cover;
 	background-attachment: fixed;
-	background-repeat: no-repeat;
 }
 
 body {
-	margin: 0;
-	overflow: hidden; /* Evita scroll por animaciones */
+	margin-left: 200px; 
+	overflow-x: hidden;
+	min-height: 100vh;
 }
 
 /* Encabezado */
 h1 {
-	height: 600px;
+	height: 300px;
 	background-image: url('fondosubtemp.png');
-	font-size: 36px;
-	color: blue;
-	text-align: center;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 64px;
+	color: #ffffff;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+	border-bottom: 5px solid #007BFF;
 }
 
 /* Contenedor de burbujas */
@@ -61,6 +67,32 @@ h1 {
 	animation-duration: 9s;
 }
 
+.burbujas div:nth-child(3){
+	width: 25px;
+	height: 36px;
+	right: 20px;
+	animation-duration: 7s;
+}
+
+.burbujas div:nth-child(4){
+	width: 50px;
+	height: 47px;
+	right: 25%;
+	animation-duration: 5s;
+}
+
+.burbujas div:nth-child(5){
+	width: 28px;
+	height: 32px;
+	left: 75%;
+	animation-duration: 12s;
+}
+.burbujas div:nth-child(6){
+	width: 45px;
+	height: 41px;
+	left: 50%;
+	animation-duration: 12s;
+}
 /* Animación */
 @keyframes animarburbujas {
 	0% {
@@ -71,7 +103,71 @@ h1 {
 		opacity: 0.3;
 	}
 	100% {
-		transform: translateY(-100vh) rotate(360deg);
+		transform: translateY(-100vh) rotate(90deg);
 		opacity: 0;
 	}
 }
+
+.aviso {
+	background-color: #d5fcff;
+	border-left: 5px solid #002fff;
+	margin: 20px auto;
+	padding: 15px;
+	width: 80%;
+	font-size: 14px;
+	color: #333;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	border-radius: 5px;
+}
+img {
+	display: block;
+	margin: 40px auto 20px;
+	max-width: 90%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+p {
+	text-align: center;
+	font-size: 18px;
+	margin: 20px auto;
+	color: #333;
+}
+/* Sidebar */
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 100%;
+	background-color: #004D60;
+	padding-top: 20px;
+	box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+	z-index: 10;
+}
+
+.sidebar ul {
+	list-style: none;
+	padding: 0;
+}
+
+.sidebar ul li {
+	margin: 20px 0;
+	text-align: center;
+}
+
+.sidebar ul li a {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	display: block;
+	padding: 10px 0;
+	transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+	background-color: #007B8A;
+	border-radius: 5px;
+}
+
