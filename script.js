@@ -5,7 +5,7 @@ const totalSlides = slides.length;
 
 function showSlide(index) {
   const slider = document.querySelector('.slider');
-  const offset = -index * 100;  // Mover la imagen hacia la izquierda
+  const offset = -index * 50;  
   slider.style.transform = `translateX(${offset}%)`;
 }
 
@@ -20,4 +20,4 @@ function prevSlide() {
 }
 
 // Inicia el slide automático
-setInterval(nextSlide, 10000); // Cambia la imagen cada 3 segundos
+setInterval(nextSlide, 20000); // Cambia la imagen cada 20 segundos
