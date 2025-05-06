@@ -1,4 +1,4 @@
-/* Estilo general */
+
 * {
 	font-family: Trebuchet, sans-serif;
 	margin: 0;
@@ -96,7 +96,6 @@ h1 {
 	left: 50%;
 	animation-duration: 12s;
 }
-/* Animación */
 @keyframes animarburbujas {
 	0% {
 		transform: translateY(0) scale(0.5);
@@ -182,4 +181,49 @@ section{
 video{
 	width: 100vh;
 	height: 60vh;
+}
+
+
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Botones de navegación */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
