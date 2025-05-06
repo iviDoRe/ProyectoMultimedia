@@ -7,7 +7,7 @@
 }
 
 html {
-	background: linear-gradient(to bottom, #e0f7fa, #80deea);
+	background: linear-gradient(to bottom, #64C6E3, #117FD5);
 	background-size: cover;
 	background-attachment: fixed;
 	scroll-behavior: smooth;
@@ -177,4 +177,9 @@ p {
 section{
 	min-height: 100vh;
 
+}
+
+video{
+	width: 100vh;
+	height: 60vh;
 }
