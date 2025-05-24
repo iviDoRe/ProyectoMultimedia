@@ -16,6 +16,7 @@
 	
 	<meta charset="UTF-8">
 	<title>Subnautica Fundraiser</title>
+	<!-- Para el favicon se ha seguido el siguiente tutorial: https://www.w3schools.com/html/html_favicon.asp-->
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -23,6 +24,7 @@
 <body>
 	<nav class="sidebar">
 		<ul>
+			<!--Se definen las secciones, cada una con una referencia que lleva a cada apartado de la web-->
 			<li><a href="#inicio">Inicio</a></li>
 			<li><a href="#campaña">Campaña</a></li>
 			<li><a href="#objetivos">Objetivos y recompensas</a></li>
@@ -36,6 +38,7 @@
 	<h1><br>Subnautica<br><br></h1>
 
 	<div class="aviso">
+		<!--El disclaimer requerido, además de los autores de la página web-->
 		<span>
 			ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio y no
 			representa un producto real. Práctica de Multimedia, 1º GDDV - Curso 24/25
@@ -49,6 +52,7 @@
 	<div class="multimedia-container">
 		<div class="multimedia-content">
 		  <div class="video-box">
+			<!--Video y audio con controles se sacó de los tutoriales de w3schools-->
 			<video autoplay muted controls>
 			  <source src="subtrailer.mp4" type="video/mp4">
 			  Tu navegador no soporta la reproducción de videos.
@@ -75,7 +79,7 @@
 	  <div class="slider-container">
 
 		<p> Podrás descubrir más sobre este inmenso ecossitema en tu tableta </p> 
-		
+	<!--Todas las fuentes del slider estan especificadas en style.css. Además en el apartado alt de estas imagenes no se ha desarrollado en profundidad debido a que era complicado describirlo de forma breve-->	
     <div class="slider">
 		<img src="1.jpg" alt="Imagen 1">
 		<img src="2.png" alt="Imagen 2">
@@ -88,6 +92,7 @@
 		<img src="9.jpg" alt="Imagen 9">
 		<img src="10.jpg" alt="Imagen 10">
     </div>
+	
 	<button class="prev" onclick="prevSlide()">&#10094;</button>
     <button class="next" onclick="nextSlide()">&#10095;</button>
 	 
@@ -181,6 +186,7 @@
 
 
 	<section id="equipo">
+		<!--En este apartado se encuentran los desarrolladores REALES del juego Subnautica-->
 		<img src="titequipo.jpg" alt="Charlie Cleveland">
 		<p>
 			¿Quieres conocer a aquellos detrás de Subnautica?
@@ -254,8 +260,9 @@
 
 
 		  </div>
-	</section>
+	</section> 
 
+	<!--La siguiente sección de comentarios esta hecha con Disqus, tal y como esta especificado en las transparencias de clase-->
 	<section id="comentarios">
 		<img src="titcomentario.jpg" alt="Comentarios">
 		<div id="disqus_thread"></div>
@@ -286,10 +293,11 @@
 			<h3>Asegurate de seguirnos en todas nuestras redes sociales para no perderte nada</h3>
 		  </div>
 		  <div class="contact-right">
-			<a href="https://x.com/unknownworlds" target="_blank" class="btn-img" style="background-image: url('logox.png');"></a>
-			<a href="https://www.facebook.com/UnknownWorlds" target="_blank" class="btn-img" style="background-image: url('logofacebook.png');"></a>
-			<a href="http://www.youtube.com/UnknownWorlds" target="_blank" class="btn-img" style="background-image: url('logoyoutube.png');"></a>
-			<a href="https://instagram.com/uwedev" target="_blank" class="btn-img" style="background-image: url('logoinstagram.png');"></a>
+			<!-- En este apartado se siguió el tutorial de w3 schools: https://www.w3schools.com/html/html_images.asps-->
+			<a href="https://x.com/unknownworlds"  class="btn-img" style="background-image: url('logox.png');"></a>
+			<a href="https://www.facebook.com/UnknownWorlds"  class="btn-img" style="background-image: url('logofacebook.png');"></a>
+			<a href="http://www.youtube.com/UnknownWorlds" class="btn-img" style="background-image: url('logoyoutube.png');"></a>
+			<a href="https://instagram.com/uwedev" class="btn-img" style="background-image: url('logoinstagram.png');"></a>
 		  </div>
 		</div>
 	  </section>
