@@ -1,3 +1,5 @@
+/*Las fuentes para este script ya se han mencionado en el codigo css, en el apartado de las slides*/
+
 let currentIndex = 0;
 
 const slides = document.querySelectorAll('.slider img');
@@ -6,7 +8,7 @@ const slider = document.querySelector('.slider');
 
 function showSlide(index) {
   const slideWidth = slides[0].clientWidth;
-  slider.style.transform = `translateX(-${index * slideWidth}px)`;
+  slider.style.transform = `translateX(-${index * slideWidth}px)`;  
 }
 
 function nextSlide() {

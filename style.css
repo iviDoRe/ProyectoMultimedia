@@ -16,20 +16,20 @@ html {
 }
 
 body {
-	margin-left: 200px; 
+	margin-left: 200px; /* Para que no se desplaze el side bar. SI SE CAMBIA EL MENU LATERAL HAY QUE CAMBIAR ESTO*/
 	overflow-x: hidden;
 	min-height: 100vh;
 }
 
 @font-face {
-	font-family: 'MiFuentePersonalizada';
+	font-family: 'fuenteSub';
 	src: url('subnautica-edited.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
   }
 /* Encabezado */
 h1 {
-	font-family: 'MiFuentePersonalizada', sans-serif;
+	font-family: 'fuenteSub', sans-serif;
 	height: 400px;
 	background-image: url('subcover.png');
 	background-size: cover;
@@ -53,6 +53,8 @@ h3{
 	color:#c3f5f8
 }
 
+/*EL SIGUIENTE APARTADO ESTA HECHO SIGUIENDO UN TUTORIAL DE YOUTUBE: https://youtu.be/PzBVTJnOL9M?si=BypNhtIafWeBCxze
+Se ha alterado con tal de ajustarse a la página web*/
 /* Contenedor de burbujas */
 .burbujas {
 	position: fixed;
@@ -60,7 +62,7 @@ h3{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: -1; /* Detrás del contenido */
+	z-index: -1; /*Para que no se sobrepongan*/
 	pointer-events: none;
 }
 
@@ -74,10 +76,10 @@ h3{
 }
 
 .burbujas div:nth-child(1){
-	width: 35px;
+	width: 35px; /* La altura y anchura editada es para darle forma ovalada y más "Natural"*/
 	height: 32px;
 	left: 10px;
-	animation-duration: 4s;
+	animation-duration: 4s; /* La distinta duración es para que no todas se muevan igual */
 }
 
 .burbujas div:nth-child(2){
@@ -116,14 +118,14 @@ h3{
 @keyframes animarburbujas {
 	0% {
 		transform: translateY(0) scale(0.5);
-		opacity: 0.6;
+		opacity: 0.8;
 	}
 	50% {
 		opacity: 0.3;
 	}
 	100% {
 		transform: translateY(-100vh) rotate(90deg);
-		opacity: 0;
+		opacity: 0; /* Va desapareciendo y rotando */
 	}
 }
 
@@ -138,6 +140,7 @@ h3{
 	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 	border-radius: 5px;
 }
+
 img {
 	display: block;
 	margin: 40px auto 20px;
@@ -147,15 +150,9 @@ img {
 	box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-p {
-	text-align: center;
-	font-size: 18px;
-	margin: 20px auto;
-	color: #333;
-}
 
 
-/* Sidebar */
+/* Sidebar. En general se trato de hacer esta parte de forma completamente original pero debido a que no se mostraba correctamente se tuvo que recurrir a ChatGPT */
 .sidebar {
 	position: fixed;
 	top: 0;
@@ -193,37 +190,43 @@ p {
 }
 
 section{
-	min-height: 10vh;
-
+	min-height: 10vh; /*Esto se pone asi porque si no había casos en los que algunas secciones colapsaba entre si. Esta es la única solución encontrada en su momento y puede que ya no sea necesaria*/
 }
 
 video{
-	width: 100vh;
+	width: 100vw;
 	height: 60vh;
 }
 
-
+/*La siguiente parte se hizo mediante varios tutoriales online (más el script) y editandolo para que duncionase correctamente
+  Algunos de los tutoriales de internet usados para esta parte son:  
+  https://walkerspider.com/es/blog/construir-un-slider-de-imagenes-en-menos-de-2-minutos/
+  https://www.w3schools.com/howto/howto_js_slideshow.asp
+  https://www.youtube.com/watch?v=bkgnp2lp7FQ
+*/
 .slider-container {
 	position: relative;
-	width: calc(100vw - 200px); /* resto de pantalla menos el sidebar */
-	margin-left: auto; /* alinea a la derecha del sidebar */
+	width: calc(100vw - 200px); /* Hay que contar con el menu lateral */
+	margin-left: auto; /* Para que no choque con el menu lateral */
 	overflow: hidden;
-	height: 100vh;
+	height: 120vh;
   }
   
   .slider {
 	display: flex;
-	width: 300%; /* 3 imágenes, cada una 100% del contenedor */
-	transition: transform 0.5s ease-in-out;
+	width: 300%; /*Si se quita esto no se ajusta el tamaño de las imagenes*/
+	transition: transform 0.5s ease-in-out; /* Esta parte anima para que se deslicen. La recomendó ChatGPT, pero se implementó siguiendo principalmente las explicaciones: https://www.w3schools.com/css/css3_transitions.asp*/
   }
   
   .slider img {
-	width: calc(100vw - 200px); /* una imagen ocupa el espacio visible */
+	width: calc(100vw - 200px); /* una imagen ocupa el espacio visible, a no se que se quite el width de .slider */
 	flex-shrink: 0;
 	height: 100vh;
-	object-fit: cover;
+	object-fit: cover; /* No funciona si el width de .slider */
   }
-/* Botones de navegación */
+
+/* Botones de navegación para el slider*/
+/* NO CONFUNDIR CON LOS BOTONES DE LAS REDES SOCIALES */
 button {
   position: absolute;
   top: 50%;
@@ -249,7 +252,9 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.descripcion-container {
+
+
+.descripcion-container {  /* Aunque se llame descripción container no es solo el container del apartado de descripción del juego sino también el de historia y gameplay*/
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -277,6 +282,7 @@ button:hover {
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   }
 
+  	/*Aquí se guarda tanto el video como la canción original*/
   .multimedia-container {
 	background-color: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(4px);
@@ -298,7 +304,7 @@ button:hover {
   .video-box {
 	position: relative;
 	width: 100%;
-	padding-top: 56.25%; /* 16:9 ratio (9 / 16 * 100) */
+	padding-top: 56.25%; /* Se tiene que ajustar a la proporción del vídeo porque si no se generaba una especie de recuadro extraño alrededor del vídeo */
 	overflow: hidden;
 	border-radius: 12px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -317,7 +323,7 @@ button:hover {
   
   .texto-box {
 	flex: 1 1 50%;
-	color: white;
+	color: white; /*Creo que el color no es necesario definirlo aquí, pero como previamente teníamos otro color de letra por si algo que haya faltado por corregir choca*/
 	font-size: 16px;
 	line-height: 1.6;
   }
@@ -331,39 +337,9 @@ button:hover {
 	width: 100%;
 	max-width: 600px;
   }
-
-  .icon-bar {
-	height: 10vh;
-	width: 100%;
-	background-color: #003344; /* Ajusta el color de fondo si deseas */
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	border-top: 3px solid #00bcd4;
-	border-bottom: 3px solid #00bcd4;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
   
-  .icon-button {
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 10px;
-	transition: transform 0.2s ease, filter 0.2s ease;
-  }
-  
-  .icon-button img {
-	height: 50px; /* Ajusta según el tamaño de los iconos */
-	width: auto;
-	filter: brightness(0) invert(1); /* blanco si el fondo es oscuro */
-  }
-  
-  .icon-button:hover {
-	transform: scale(1.2);
-	filter: brightness(1.5) invert(0.8);
-  }
-  
-  p {
+  p { /*A la hora de desarrollar la web se decidió que era más sencillo hacer que todos los parrafos fuesen contenedores para que no hubiese problemas de contraste con el fondo gradiente*/
+	text-align: center;
 	background: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(6px);
 	padding: 15px 25px;
@@ -387,8 +363,8 @@ button:hover {
   }
   
   .contact-left {
-	width: 30%;          /* 30% ancho horizontal */
-	height: 100%;        /* altura completa del container (30vh) */
+	width: 30%;         
+	height: 100%;        
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -400,20 +376,10 @@ button:hover {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	gap: 100px; /* espacio reducido entre botones */
+	gap: 200px; /*El espacio entre los botones. Como no se centran automaticamente por alguna razon se establece manualmente la distancia entre ellos tratando de que se vean bien para el usuario */
   }
   
-  
-  .contact-left h1 {
-	font-size: 3rem;
-	margin: 0;
-  }
-  
-  .contact-left h3 {
-	font-size: 1.2rem;
-	margin: 5px 0 0 0;
-  }
-  
+  /*Los iconos de redes sociales*/
   .btn-img {
 	display: inline-block;
 	width: 60px;
@@ -425,6 +391,7 @@ button:hover {
 	text-decoration: none;
   }
   
+  /* Las componenetes del equipo de desarrollo se organizan en una tabla 2*4, asi no ocupa gran parte*/
   .people-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -440,7 +407,7 @@ button:hover {
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	background-color: rgba(255, 255, 255, 0.1); /* opcional: para visual ayuda */
+	background-color: rgba(231, 0, 0, 0.1); /* Se produce un mini efecto de blurr, lo cual queda bien visualmente */ 
 	padding: 20px;
 	border-radius: 12px;
 	max-width: 550px;
