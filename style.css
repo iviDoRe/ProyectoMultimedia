@@ -185,23 +185,25 @@ video{
 
 
 .slider-container {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.slider {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.slider img {
-  width: 200%;
-  height: auto;
-  display: block;
-}
-
+	position: relative;
+	width: calc(100vw - 200px); /* resto de pantalla menos el sidebar */
+	margin-left: auto; /* alinea a la derecha del sidebar */
+	overflow: hidden;
+	height: 60vh;
+  }
+  
+  .slider {
+	display: flex;
+	width: 300%; /* 3 imágenes, cada una 100% del contenedor */
+	transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider img {
+	width: calc(100vw - 200px); /* una imagen ocupa el espacio visible */
+	flex-shrink: 0;
+	height: 60vh;
+	object-fit: cover;
+  }
 /* Botones de navegación */
 button {
   position: absolute;
