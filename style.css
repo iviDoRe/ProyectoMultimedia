@@ -189,7 +189,7 @@ video{
 	width: calc(100vw - 200px); /* resto de pantalla menos el sidebar */
 	margin-left: auto; /* alinea a la derecha del sidebar */
 	overflow: hidden;
-	height: 60vh;
+	height: 100vh;
   }
   
   .slider {
@@ -201,7 +201,7 @@ video{
   .slider img {
 	width: calc(100vw - 200px); /* una imagen ocupa el espacio visible */
 	flex-shrink: 0;
-	height: 60vh;
+	height: 100vh;
 	object-fit: cover;
   }
 /* Botones de navegación */
