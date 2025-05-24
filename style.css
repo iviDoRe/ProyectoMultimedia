@@ -423,3 +423,38 @@ button:hover {
 	text-decoration: none;
   }
   
+  .people-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 40px;
+	padding: 40px;
+	justify-content: center;     /* Centra el grid horizontalmente */
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;              /* Centra el grid dentro de la página */
+  }
+  
+  .person-container {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	background-color: rgba(255, 255, 255, 0.1); /* opcional: para visual ayuda */
+	padding: 20px;
+	border-radius: 12px;
+	max-width: 550px;
+	margin: 0 auto;              /* Centra cada item dentro de su celda */
+  }
+  
+  .person-container img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+	flex-shrink: 0;
+  }
+  
+  .person-container .text {
+	font-size: 1rem;
+	line-height: 1.4;
+  }
+  
