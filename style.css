@@ -21,8 +21,15 @@ body {
 	min-height: 100vh;
 }
 
+@font-face {
+	font-family: 'MiFuentePersonalizada';
+	src: url('subnautica-edited.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
 /* Encabezado */
 h1 {
+	font-family: 'MiFuentePersonalizada', sans-serif;
 	height: 300px;
 	background-image: url('fondosubtemp.png');
 	background-size: cover;
@@ -256,4 +263,59 @@ button:hover {
 	height: auto;
 	border-radius: 12px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .multimedia-container {
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(4px);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	padding: 30px;
+	margin: 40px auto;
+	max-width: 1000px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .multimedia-content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 30px;
+  }
+  
+  .video-box {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%; /* 16:9 ratio (9 / 16 * 100) */
+	overflow: hidden;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .video-box video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius: 12px;
+	object-fit: cover;
+  }
+  
+  .texto-box {
+	flex: 1 1 50%;
+	color: white;
+	font-size: 16px;
+	line-height: 1.6;
+  }
+  
+  .audio-box {
+	margin-top: 20px;
+	text-align: center;
+  }
+  
+  .audio-box audio {
+	width: 100%;
+	max-width: 600px;
   }
