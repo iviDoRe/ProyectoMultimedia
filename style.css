@@ -30,7 +30,7 @@ body {
 /* Encabezado */
 h1 {
 	font-family: 'fuenteSub', sans-serif;
-	height: 400px;
+	height: 500px; /*La altura mínima de la imagen principal es de 500*/
 	background-image: url('subcover.png');
 	background-size: cover;
 	background-position: center;
