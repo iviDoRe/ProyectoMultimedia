@@ -229,3 +229,31 @@ button {
 button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+.descripcion-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px;
+	flex-wrap: wrap;
+  }
+  
+  .texto-descripcion {
+	flex: 1 1 60%;
+	color: white; /* No se porque no funciona esta parte del color */
+	font-size: 18px;
+	line-height: 1.6;
+	padding-right: 20px;
+  }
+  
+  .imagen-descripcion {
+	flex: 1 1 35%;
+	text-align: center;
+  }
+  
+  .imagen-descripcion img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
