@@ -30,8 +30,8 @@ body {
 /* Encabezado */
 h1 {
 	font-family: 'MiFuentePersonalizada', sans-serif;
-	height: 300px;
-	background-image: url('fondosubtemp.png');
+	height: 400px;
+	background-image: url('subcover.png');
 	background-size: cover;
 	background-position: center;
 	display: flex;
@@ -41,6 +41,16 @@ h1 {
 	color: #ffffff;
 	text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 	border-bottom: 5px solid #007BFF;
+}
+
+h2{
+	font-size: medium;
+	color:#d5fcff
+}
+
+h3{
+	font-size: medium;
+	color:#c3f5f8
 }
 
 /* Contenedor de burbujas */
@@ -181,7 +191,7 @@ p {
 }
 
 section{
-	min-height: 100vh;
+	min-height: 10vh;
 
 }
 
@@ -319,3 +329,97 @@ button:hover {
 	width: 100%;
 	max-width: 600px;
   }
+
+  .icon-bar {
+	height: 10vh;
+	width: 100%;
+	background-color: #003344; /* Ajusta el color de fondo si deseas */
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-top: 3px solid #00bcd4;
+	border-bottom: 3px solid #00bcd4;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  
+  .icon-button img {
+	height: 50px; /* Ajusta según el tamaño de los iconos */
+	width: auto;
+	filter: brightness(0) invert(1); /* blanco si el fondo es oscuro */
+  }
+  
+  .icon-button:hover {
+	transform: scale(1.2);
+	filter: brightness(1.5) invert(0.8);
+  }
+  
+  p {
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(6px);
+	padding: 15px 25px;
+	border-radius: 15px;
+	margin: 20px auto;
+	max-width: 800px;
+	color: white;
+	box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  }
+
+  #contacto {
+	width: 100vw;
+	height: 30vh;
+  }
+  
+  .contact-container {
+	background-color: #003344;
+	display: flex;
+	height: 100%;
+	width: 100%;
+  }
+  
+  .contact-left {
+	width: 30%;          /* 30% ancho horizontal */
+	height: 100%;        /* altura completa del container (30vh) */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 20px;
+  }
+  
+  .contact-right {
+	width: 70%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 100px; /* espacio reducido entre botones */
+  }
+  
+  
+  .contact-left h1 {
+	font-size: 3rem;
+	margin: 0;
+  }
+  
+  .contact-left h3 {
+	font-size: 1.2rem;
+	margin: 5px 0 0 0;
+  }
+  
+  .btn-img {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border-radius: 6px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-decoration: none;
+  }
+  
